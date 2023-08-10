@@ -1,0 +1,364 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width:  1200px;
+    margin: auto;
+}
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
+
+body{
+    font-family: serif, serif;
+    background-color: #f9fbfd;
+    font-size: 18px;
+    background-image: url("./img-background/light\ background.jpg");
+
+    &.dark{
+        background: #0f0f0f;
+        background-image: url("./img-background/background.jpg");
+        transition:.4s ease all;
+    }
+    }
+
+h1{
+    font-size: 36px;
+    font-style:bold;
+}
+body.dark h1{
+color: #c987cf;
+}
+h2{
+    font-size: 28px;
+    text-align: center;
+    font-style:bold;
+    font-weight: 700;
+    
+}
+body.dark h2{
+    color: #c987cf;
+    }
+p{
+    line-height: 1.2;
+    margin: 20px; 
+
+}
+body.dark p{
+    color: #ece5ee;
+    }
+section{
+    min-height: 20vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 1px -2px gray;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    width:100%;
+    max-width: 100%;
+    height: 20px;
+    z-index:9999;
+    background-color:#fbfbfb;
+}
+
+body.dark header{
+background-color:#313131;
+}
+.logo{
+ margin-left: 167px;   
+}
+
+nav{
+    font-weight: 600;
+
+}
+body.dark nav{
+    color: #f1edf1;
+}
+.nav-list {
+    display: flex; 
+}
+
+.nav-link {
+    display: flex;
+    padding: 2rem;
+
+}
+activate, .nav-link:hover {
+    color:#7797f0;
+    transform:translateY(-3px) scale(1.05);
+}
+
+
+#inicio{
+    text-align: center;
+    
+
+}
+
+img.fotoPR{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+
+.boton-CV{
+    border-radius: 15%;
+    padding: 15px;
+    size: 3%;
+    color: #fbfbfb;
+    background-color: #7797f0;
+}
+body.dark .boton-CV{
+    background-color: #a552a8  
+}
+activate, .boton-CV:hover{
+    transform:translateY(-3px) scale(1.05);
+}
+#contacto
+.hablemos{
+        background-color:#d8c9db;
+        color:#0f0f0f;
+        margin: 220px 30px 20px 30px;
+        padding: 2%;
+        text-align: center;
+        border-radius: 3%;
+        
+}
+body.dark #contacto
+.hablemos {
+    background-color:#222122;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+    text-align: center;
+    border-color: #f1edf1;
+    cursor:pointer;
+ 
+}
+body.dark .icons
+.img-icons{
+    filter: invert(67%) sepia(42%) saturate(5080%) hue-rotate(200deg) brightness(102%) contrast(88%);
+}
+    
+    .active,.icons li a:hover {
+        transform:translateY(-3px) scale(1.05);
+        background-color: #7797f0;
+        }
+
+
+footer{
+    color: #fbfbfb;
+    background-color: #773488;
+    padding: 2px;
+    text-align: center;
+}
+body.dark footer{
+    background-color: #000000
+}
+.acordeon{
+    background-color: #d8c9db;
+    color:black;
+    cursor:pointer;
+    padding: 20px;
+    width: 100%;
+    border:none;
+    text-align: center;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.active,.acordeon:hover{
+    background-color: #aac7f1;
+    transform:translateY(-3px) scale(1.05)
+}
+body.dark .acordeon:hover{
+    background-color: #470355;
+    color:#f4f6fa;
+    transform:translateY(-3px) scale(1.05)
+}
+
+body.dark button.acordeon{
+    background-color: #222122;
+    color:#aac7f1 ;
+    transform:translateY(-3px) scale(1.05)
+}
+
+.panel{
+    padding: 0px 20px;
+    display: none;
+    background-color: #f1edf1;
+    overflow: hidden;
+}
+body.dark .panel{
+    background-color: #2e2c2e;
+}
+.acordeon-experiencia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#CV-download{
+    background-color: #773488;
+    color:#faf2f2;
+    margin: 20px;
+    text-align: center;
+    border-radius: 3%;
+    font-size: large;
+        
+}
+body.dark #CV-download{
+    background-color: #291b29
+}
+.abrir-menu, 
+.cerrar-menu {
+    display: none;
+
+}
+@media screen and (max-width:550px){
+    .abrir-menu,
+    .cerrar-menu {
+        display:block;
+        border:0;
+        font-size:1.25rem;
+        background-color: transparent;
+        cursor:pointer
+    }
+
+.abrir-menu{
+    color: #0f0f0f;
+}
+
+.cerrar-menu{
+    color: #f1edf1;
+}
+.nav{
+    opacity:0;
+    visibility: hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:end;
+    gap:1rem;
+    position: absolute;
+    top:0;
+    right:0;
+    background-color: #052361;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0 0 0 .5);
+}
+.nav.visible{
+    opacity:1;
+    visibility: visible;
+}
+.nav-list{
+    flex-direction: column;
+    align-items: end;
+}
+.nav-list li a {
+    color:#f3f0f3;
+}
+.logo{
+    display: none;
+}
+body.dark i.bi.bi-list{
+    filter: invert(97%) sepia(9%) saturate(128%) hue-rotate(255deg) brightness(99%) contrast(91%);
+}
+}
+
+.toggle{
+background-color: #1c223b ;
+border-radius: 1000px;
+border: none;
+position:relative;
+cursor:pointer;
+display: flex;
+outline: none;
+&::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background:  #f3f0f3;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius: 100px;
+    transition:.3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+&.active{
+    background:#2f1a35;
+    color: #0f0f0f;
+    &::after{
+        right:0;
+        left:unset;
+    }
+}
+}
+span{
+    width: 30px;
+    height:30px;
+    line-height:30px;
+    display:block;
+    background:none;
+    color: #f3f0f3;
+}
